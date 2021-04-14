@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Don&#39;s Thoughts</title>
+    <link>https://donny-son.github.io/tags/python/</link>
+    <description>Recent content in python on Don&#39;s Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 14 Apr 2021 22:14:21 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>venv vs conda</title>
+      <link>https://donny-son.github.io/posts/venv-vs-conda/</link>
+      <pubDate>Wed, 14 Apr 2021 22:14:21 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/venv-vs-conda/</guid>
+      <description>Comparison between `conda` and `venv`</description>
+    </item>
+    
+  </channel>
+</rss>
