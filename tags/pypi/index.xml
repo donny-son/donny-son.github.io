@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Don&#39;s Thoughts</title>
-    <link>https://donny-son.github.io/tags/python/</link>
-    <description>Recent content in python on Don&#39;s Thoughts</description>
+    <title>pypi on Don&#39;s Thoughts</title>
+    <link>https://donny-son.github.io/tags/pypi/</link>
+    <description>Recent content in pypi on Don&#39;s Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 15 Apr 2021 00:01:49 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Apr 2021 00:01:49 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/pypi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Upload to Pypi</title>
       <link>https://donny-son.github.io/posts/upload-to-pypi/</link>
@@ -15,15 +15,6 @@
       <description>Intro Few days ago, I published my first python package to pypi. Here&amp;rsquo;s what I&amp;rsquo;ve learned.
   Tools build and twine were the two fundamental packages. The build package literally builds a repository into a distributable compressed file. This simple command python3 -m build will create a dist/ directory which contains the tar.gz and whl files.
 twine can directly upload your repository to pypi and testpypi. testpypi is nothing more than a test version of pypi.</description>
-    </item>
-    
-    <item>
-      <title>venv vs conda</title>
-      <link>https://donny-son.github.io/posts/venv-vs-conda/</link>
-      <pubDate>Wed, 14 Apr 2021 22:14:21 +0900</pubDate>
-      
-      <guid>https://donny-son.github.io/posts/venv-vs-conda/</guid>
-      <description>Comparison between `conda` and `venv`</description>
     </item>
     
   </channel>
