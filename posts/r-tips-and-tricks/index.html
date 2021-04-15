@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>R Tips and Tricks | Don&#39;s Thoughts</title>
-<meta name="keywords" content="python" />
+<meta name="keywords" content="R, RStudio" />
 <meta name="description" content="Intro Over the past few years studying statistics, I&rsquo;ve learned a few tips and tricks with R and RStudio.
 Import multiple libraries at once Since R has some object-oriented goodness, importing multiple libraries all at once is possible in the following way.
 1 2  pkgs &lt;- c(&#34;ggplot2&#34;, &#34;dplyr&#34;, &#34;sp&#34;, &#34;sf&#34;, &#34;reticulate&#34;, ...) lapply(library, pkgs, character.only = TRUE)   Also note that importing tidyverse package can come in handy.">
@@ -32,8 +32,8 @@ Import multiple libraries at once Since R has some object-oriented goodness, imp
 1 2  pkgs &lt;- c(&#34;ggplot2&#34;, &#34;dplyr&#34;, &#34;sp&#34;, &#34;sf&#34;, &#34;reticulate&#34;, ...) lapply(library, pkgs, character.only = TRUE)   Also note that importing tidyverse package can come in handy." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://donny-son.github.io/posts/r-tips-and-tricks/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-04-15T20:26:25&#43;09:00" />
-<meta property="article:modified_time" content="2021-04-15T20:26:25&#43;09:00" /><meta property="og:site_name" content="donsThoughts" />
+<meta property="article:published_time" content="2021-04-16T07:32:54&#43;09:00" />
+<meta property="article:modified_time" content="2021-04-16T07:32:54&#43;09:00" /><meta property="og:site_name" content="donsThoughts" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="R Tips and Tricks"/>
@@ -70,13 +70,13 @@ Import multiple libraries at once Since R has some object-oriented goodness, imp
   "name": "R Tips and Tricks",
   "description": "Intro Over the past few years studying statistics, I\u0026rsquo;ve learned a few tips and tricks with R and RStudio.\nImport multiple libraries at once Since R has some object-oriented goodness, importing multiple libraries all at once is possible in the following way.\n1 2  pkgs \u0026lt;- c(\u0026#34;ggplot2\u0026#34;, \u0026#34;dplyr\u0026#34;, \u0026#34;sp\u0026#34;, \u0026#34;sf\u0026#34;, \u0026#34;reticulate\u0026#34;, ...) lapply(library, pkgs, character.only = TRUE)   Also note that importing tidyverse package can come in handy.",
   "keywords": [
-    "python"
+    "R", "RStudio"
   ],
   "articleBody": "Intro Over the past few years studying statistics, I’ve learned a few tips and tricks with R and RStudio.\nImport multiple libraries at once Since R has some object-oriented goodness, importing multiple libraries all at once is possible in the following way.\n1 2  pkgs  c(\"ggplot2\", \"dplyr\", \"sp\", \"sf\", \"reticulate\", ...) lapply(library, pkgs, character.only = TRUE)   Also note that importing tidyverse package can come in handy.\nBackwards assignment with pipe(%%) operators If you’re familiar with the concept of tidy data, you already know that the dplyr package supports backwards(?) assignment for variables.\n1 2  library(dplyr) iris %% head - iris.head   This comes in handy when you have multiple pipes.\n1 2 3 4 5  library(dplyr) iris %% some.first.operation %% ... %% some.last.operation - iris.cleaned   The Best IDE for R Personally, it’s hands down RStudio. I know other editors such as VSCode, PyCharm support R with various extensions. They are all okay, but none of those could not top RStudio. I just keep comming back to it. The code execution for Rmd files and the variable viewer, the default 2*2 grid layout just gives me some sort of peace of mind. I’m perfectly aware that RStudio is not the best editor in the development world, but at least it’s great just for R.\nI also use Neovim with Nvim-R. This neovim package offers a similarly satisfying experience as it supports variable viewer with great autocompletion as well.\nTips for RStudio Path Settings using Snippets For roughly 99% of my workflow, I store all my rmd, r, images, csv and .RData all under one repository. But, in RStudio the default path when you first send a command to the R console is not that repository. It actually points to your R kernel path. So, this means everytime you will have to manually copy the absolute link to your repository and setwd().\nLuckily, for us we can use snippets and RStudioAPI library to relieve the pain. Under RStudio Settings(Preferences)  Code at the bottom, you can see Edit snippets. Click and paste the snippet in your snippet file.\n1 2 3  snippet setpath current_working_dir   Then, everytime on top of your script, you can just simply type setpath and Rstudio will recognize this as your snippet and suggests completion. Hit enter and execute the two lines in your console. Just like that, your R console’s path is aligned with the R script path you are editing.\nThemes RStudio provides various color themes by default, but somehow I ended up not liking them all. You can actually add colorthemes from this theme editor website.   Fonts I recommend using ligature supported fonts such as JetBrains Mono or Fira Code. They’re all open-sourced and looks incredible when in the editor. Math ligatures can save you quite some time on debugging.   Python and R at the Same time I’m sure most of you heard that jupyter can run julia, python and r kernels. But, is it easy to use different languages cell by cell? Furthermore, can you share objects between those languages?\nThe reticulate library makes this possible. In the latest version of RStudio you can also handpick your desired python environment associated with the reticulate package. I prefer using a conda environment, so created one named ret and use this as the default interpreter for Rstudio.\nConclusion More tips and tricks will follow. Thanks for taking the time to read 👋.\n",
   "wordCount" : "568",
   "inLanguage": "en",
-  "datePublished": "2021-04-15T20:26:25+09:00",
-  "dateModified": "2021-04-15T20:26:25+09:00",
+  "datePublished": "2021-04-16T07:32:54+09:00",
+  "dateModified": "2021-04-16T07:32:54+09:00",
   "author":{
     "@type": "Person",
     "name": "Me"
@@ -170,7 +170,7 @@ Import multiple libraries at once Since R has some object-oriented goodness, imp
     <h1 class="post-title">
       R Tips and Tricks
     </h1>
-    <div class="post-meta">April 15, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me
+    <div class="post-meta">April 16, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me
 </div>
   </header> <div class="toc">
     <details >
@@ -295,7 +295,8 @@ The <a href="https://rstudio.github.io/reticulate/"><code>reticulate</code></a> 
 </div>
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://donny-son.github.io/tags/python/">python</a></li>
+      <li><a href="https://donny-son.github.io/tags/r/">R</a></li>
+      <li><a href="https://donny-son.github.io/tags/rstudio/">RStudio</a></li>
     </ul>
 <nav class="paginav">
   <a class="next" href="https://donny-son.github.io/posts/creating-gui-for-your-python-app/">
