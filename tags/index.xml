@@ -5,7 +5,61 @@
     <link>https://donny-son.github.io/tags/</link>
     <description>Recent content in Tags on Don&#39;s Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 16 Apr 2021 07:32:54 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Apr 2021 09:47:32 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>anaconda</title>
+      <link>https://donny-son.github.io/tags/anaconda/</link>
+      <pubDate>Sat, 17 Apr 2021 09:47:32 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/tags/anaconda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://donny-son.github.io/tags/automation/</link>
+      <pubDate>Sat, 17 Apr 2021 09:47:32 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conda environment</title>
+      <link>https://donny-son.github.io/tags/conda-environment/</link>
+      <pubDate>Sat, 17 Apr 2021 09:47:32 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/tags/conda-environment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cron</title>
+      <link>https://donny-son.github.io/tags/cron/</link>
+      <pubDate>Sat, 17 Apr 2021 09:47:32 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/tags/cron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://donny-son.github.io/tags/python/</link>
+      <pubDate>Sat, 17 Apr 2021 09:47:32 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unix</title>
+      <link>https://donny-son.github.io/tags/unix/</link>
+      <pubDate>Sat, 17 Apr 2021 09:47:32 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/tags/unix/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>R</title>
       <link>https://donny-son.github.io/tags/r/</link>
@@ -30,15 +84,6 @@
       <pubDate>Thu, 15 Apr 2021 08:05:55 +0900</pubDate>
       
       <guid>https://donny-son.github.io/tags/gui/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://donny-son.github.io/tags/python/</link>
-      <pubDate>Thu, 15 Apr 2021 08:05:55 +0900</pubDate>
-      
-      <guid>https://donny-son.github.io/tags/python/</guid>
       <description></description>
     </item>
     

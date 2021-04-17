@@ -5,7 +5,17 @@
     <link>https://donny-son.github.io/tags/python/</link>
     <description>Recent content in python on Don&#39;s Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 15 Apr 2021 08:05:55 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Apr 2021 09:47:32 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cronjob With Conda</title>
+      <link>https://donny-son.github.io/posts/cronjob-with-conda/</link>
+      <pubDate>Sat, 17 Apr 2021 09:47:32 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/cronjob-with-conda/</guid>
+      <description>How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.
+TL;DR: Don&amp;rsquo;t try to use conda activate &amp;lt;env name&amp;gt;. Set PATH to /opt/anaconda3/envs/&amp;lt;env name&amp;gt;/bin in your crontab.</description>
+    </item>
+    
     <item>
       <title>Creating Gui for Your Python App</title>
       <link>https://donny-son.github.io/posts/creating-gui-for-your-python-app/</link>

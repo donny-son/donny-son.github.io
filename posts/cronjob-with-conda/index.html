@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Cronjob With Conda | Don&#39;s Thoughts</title>
+<meta name="keywords" content="python, anaconda, conda environment, unix, cron, automation" />
+<meta name="description" content="How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.
+TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/anaconda3/envs/&lt;env name&gt;/bin in your crontab.">
+<meta name="author" content="Me">
+<link rel="canonical" href="https://donny-son.github.io/posts/cronjob-with-conda/" />
+<meta name="google-site-verification" content="XYZabc" />
+<meta name="yandex-verification" content="XYZabc" />
+<meta name="msvalidate.01" content="XYZabc" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.bc435bed1061be2618667408894ae8a5d27c970831ce57f287e42f911918fcbc.css" integrity="sha256-vENb7RBhviYYZnQIiUropdJ8lwgxzlfyh&#43;QvkRkY/Lw=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://donny-son.github.io/programmer.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://donny-son.github.io/programmer.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://donny-son.github.io/programmer.png">
+<link rel="apple-touch-icon" href="https://donny-son.github.io/programmer.png">
+<link rel="mask-icon" href="https://donny-son.github.io/programmer.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+
+
+    <script>
+    "use strict";
+
+    !function() {
+    var t = window.driftt = window.drift = window.driftt || [];
+    if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+        t.factory = function(e) {
+        return function() {
+            var n = Array.prototype.slice.call(arguments);
+            return n.unshift(e), t.push(n), t;
+        };
+        }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+        }), t.load = function(t) {
+        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+        var i = document.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(o, i);
+        };
+    }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('5h33nvymhycm');
+    </script>
+
+<meta name="generator" content="Hugo 0.82.0" />
+<meta property="og:title" content="Cronjob With Conda" />
+<meta property="og:description" content="How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.
+TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/anaconda3/envs/&lt;env name&gt;/bin in your crontab." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://donny-son.github.io/posts/cronjob-with-conda/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-04-17T09:47:32&#43;09:00" />
+<meta property="article:modified_time" content="2021-04-17T09:47:32&#43;09:00" /><meta property="og:site_name" content="donsThoughts" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cronjob With Conda"/>
+<meta name="twitter:description" content="How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.
+TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/anaconda3/envs/&lt;env name&gt;/bin in your crontab."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://donny-son.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Cronjob With Conda",
+      "item": "https://donny-son.github.io/posts/cronjob-with-conda/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cronjob With Conda",
+  "name": "Cronjob With Conda",
+  "description": "How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.\nTL;DR: Don\u0026rsquo;t try to use conda activate \u0026lt;env name\u0026gt;. Set PATH to /opt/anaconda3/envs/\u0026lt;env name\u0026gt;/bin in your crontab.",
+  "keywords": [
+    "python", "anaconda", "conda environment", "unix", "cron", "automation"
+  ],
+  "articleBody": "How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.\nTL;DR: Don’t try to use conda activate . Set PATH to /opt/anaconda3/envs//bin in your crontab. If any local package import error occur, then additionaly set PYTHONPATH to /path/to/your/code/repository in crontab.\nExample Usage Let’s say that I want a python script(main.py) in a certain repository(/home/dongookson/test_scripts/) to run every minute using a conda environment called prod.\nDirectory Maps The repository that I use in this example will look something like this.\n1 2 3 4 5 6 7 8  /home/dongookson ├──cron.sh └──test_scripts/ ├── main.py ├── src/ │ └── resource.py └── utils/ └── tool.py   The main.py will just be a simple python script.\n1 2 3 4 5 6 7 8 9 10 11 12 13  from src.resource import * from utils.tool import * from datetime import datetime def foo(): print(f\"foo------------------------------------------\") print(f\"Foo was called! {datetime.now()}\") print(f\"------------------------------------------foo\") return if __name__==\"__main__\": foo()   Figuring out the conda environment First, remember that you have two versions of crontab. One will be sudo crontab which has super user privilege and the other is crontab that is associated with your account.\nFirst, check your conda env path. This will be essential when you want your script to run under a specific conda environment. If the environment is not specified and your python script uses certain packages associated only with that environment, import errors will occur.\n1 2 3 4 5  (base) dongookson➜~» conda env list # conda environments: # base * /Users/dongookson/opt/anaconda3 prod /Users/dongookson/opt/anaconda3/envs/prod   We can observe that the python resides in the /Users/dongookson/opt/anaconda3/envs/prod. The actual python interpreter binary will be inside /Users/dongookson/opt/anaconda3/envs/prod/bin.\nWe will explicity set this as the PATH variable in our sudo crontab. This can be done in the following way. I use neovim as the default editor so the following command will open up the crontab in neovim.\n1  (base) dongookson➜~» sudo crontab -e   Then all you have to do is write the following content on top of your job.\ncrontab\n1  PATH=/Users/dongookson/opt/anaconda3/envs/prod/bin   Bash scripting Now, you can make a .sh script which consists of various terminal commands in order to execute the /home/dongookson/test_scripts/main.py python script.\nWhen scripting the cron.sh file, just recall the commands that you would normally give the terminal. In this case, it can be,\ncron.sh\n1 2  #!/bin/sh python3 /home/dongookson/test_scripts/main.py   The first part is the shebang. This will run the .sh file with the shell in the shebang directory.\nBut, you can see that something is missing.\nYes, we did not activate conda environment. In my case, this part is not necessary as I’ve already set the PATH in the crontab to the prod environment in the above.\nEditing crontab Given that all the steps above are covered, we can add the cronjob to the crontab.\n1  (base) dongookson➜~» sudo crontab -e   crontab\n1 2  PATH=/Users/dongookson/opt/anaconda3/envs/prod/bin * * * * * /home/dongookson/cron.sh  /home/dongookson/clogs.log 2\u00261   The second line is the cronjob which is\n Run the job every minute. The job is to run the cron.sh as a shell script(note that just referencing the shell script will run the commands inside the script due to the shebang) Append(») terminal outputs to /home/dongookson/clogs.log If an error occurs treat this as a terminal output(2\u00261)  Result I should now get logs in clogs.log. We can see that the foo function was called every minute.\n1 2 3 4 5 6 7 8 9 10  (base) dongookson➜~» cat clogs.log foo------------------------------------------ Foo was called! 2021-04-16 13:47:01.454232 ------------------------------------------foo foo------------------------------------------ Foo was called! 2021-04-16 13:48:01.489774 ------------------------------------------foo foo------------------------------------------ Foo was called! 2021-04-16 13:49:01.529458 ------------------------------------------foo   Troubleshooting Sometimes import problems might occur when you are importing local packages or when you want to run a python script which is not located at the top level in your code repository. From the example above, let’s say you want to run resource.py under test_scripts/src/.\nThen I recommend modifying your crontab by adding a PYTHONPATH variable. This variable is an additional directory where your python interpreter will look for modules or packages. So, if you are using custom python libraries outside of the global python package directory(site-packages), this is a mandatory step for running a cronjob.\ncrontab\n1 2 3  PATH=/Users/dongookson/opt/anaconda3/envs/prod/bin PYTHONPATH=/home/dongookson/test_scripts * * * * * /home/dongookson/cron.sh  /home/dongookson/clogs.log 2\u00261   ",
+  "wordCount" : "742",
+  "inLanguage": "en",
+  "datePublished": "2021-04-17T09:47:32+09:00",
+  "dateModified": "2021-04-17T09:47:32+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "Me"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://donny-son.github.io/posts/cronjob-with-conda/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Don's Thoughts",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://donny-son.github.io/programmer.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://donny-son.github.io/" accesskey="h" title="  (Alt + H)">
+                <img src="/homebtn.gif" alt="logo" aria-label="logo"
+                    height="30"> </a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://donny-son.github.io/posts/" title="posts">
+                    <span>posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://donny-son.github.io/search/" title="search (Alt &#43; /)" accesskey=/>
+                    <span>search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://donny-son.github.io/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://donny-son.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://donny-son.github.io/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Cronjob With Conda
+    </h1>
+    <div class="post-meta">April 17, 2021&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Me
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <div class="details">Table of Contents</div>
+        </summary>
+        <div class="inner"><ul>
+                <li>
+                    <a href="#how-to-setup-a-python-cronjob-with-conda" aria-label="How to setup a python cronjob with conda">How to setup a python cronjob with conda</a></li>
+                <li>
+                    <a href="#example-usage" aria-label="Example Usage">Example Usage</a><ul>
+                        
+                <li>
+                    <a href="#directory-maps" aria-label="Directory Maps">Directory Maps</a></li>
+                <li>
+                    <a href="#figuring-out-the-conda-environment" aria-label="Figuring out the conda environment">Figuring out the conda environment</a></li>
+                <li>
+                    <a href="#bash-scripting" aria-label="Bash scripting">Bash scripting</a></li>
+                <li>
+                    <a href="#editing-crontab" aria-label="Editing crontab">Editing <code>crontab</code></a></li>
+                <li>
+                    <a href="#result" aria-label="Result">Result</a></li>
+                <li>
+                    <a href="#troubleshooting" aria-label="Troubleshooting">Troubleshooting</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="how-to-setup-a-python-cronjob-with-conda">How to setup a python cronjob with conda<a hidden class="anchor" aria-hidden="true" href="#how-to-setup-a-python-cronjob-with-conda">#</a></h2>
+<p>UNIX based machine users can easily setup automated tasks using the default <code>cronjob</code> module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.</p>
+<p>TL;DR: Don&rsquo;t try to use <code>conda activate &lt;env name&gt;</code>. Set <code>PATH</code> to <code>/opt/anaconda3/envs/&lt;env name&gt;/bin</code> in your <code>crontab</code>. If any local package import error occur, then additionaly set <code>PYTHONPATH</code> to <code>/path/to/your/code/repository</code> in <code>crontab</code>.</p>
+<h2 id="example-usage">Example Usage<a hidden class="anchor" aria-hidden="true" href="#example-usage">#</a></h2>
+<p>Let&rsquo;s say that I want a python script(<code>main.py</code>) in a certain repository(<code>/home/dongookson/test_scripts/</code>) to run every minute using a conda environment called <code>prod</code>.</p>
+<h3 id="directory-maps">Directory Maps<a hidden class="anchor" aria-hidden="true" href="#directory-maps">#</a></h3>
+<p>The repository that I use in this example will look something like this.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">/home/dongookson
+├──cron.sh
+└──test_scripts/
+    ├── main.py
+    ├── src/
+    │   └── resource.py
+    └── utils/
+        └── tool.py
+</code></pre></td></tr></table>
+</div>
+</div><p>The <code>main.py</code> will just be a simple python script.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">src.resource</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">utils.tool</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;foo------------------------------------------&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;Foo was called! {datetime.now()}&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;------------------------------------------foo&#34;</span><span class="p">)</span>
+    <span class="k">return</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+    <span class="n">foo</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="figuring-out-the-conda-environment">Figuring out the conda environment<a hidden class="anchor" aria-hidden="true" href="#figuring-out-the-conda-environment">#</a></h3>
+<p>First, remember that you have two versions of <code>crontab</code>. One will be <code>sudo crontab</code> which has super user privilege and the other is <code>crontab</code> that is associated with your account.</p>
+<p>First, check your <code>conda env</code> path. This will be essential when you want your script to run under a specific conda environment. If the environment is not specified and your python script uses certain packages associated only with that environment, import errors will occur.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">(</span>base<span class="o">)</span> dongookson➜~» conda env list
+<span class="c1"># conda environments:</span>
+<span class="c1">#</span>
+base                  *  /Users/dongookson/opt/anaconda3
+prod                    /Users/dongookson/opt/anaconda3/envs/prod
+</code></pre></td></tr></table>
+</div>
+</div><p>We can observe that the python resides in the <code>/Users/dongookson/opt/anaconda3/envs/prod</code>. The actual python interpreter binary will be inside <code>/Users/dongookson/opt/anaconda3/envs/prod/bin</code>.</p>
+<p>We will explicity set this as the <code>PATH</code> variable in our <code>sudo crontab</code>. This can be done in the following way. I use neovim as the default editor so the following command will open up the <code>crontab</code> in neovim.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">(</span>base<span class="o">)</span> dongookson➜~» sudo crontab -e
+</code></pre></td></tr></table>
+</div>
+</div><p>Then all you have to do is write the following content on top of your job.</p>
+<p><strong><em>crontab</em></strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">PATH</span><span class="o">=</span>/Users/dongookson/opt/anaconda3/envs/prod/bin
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="bash-scripting">Bash scripting<a hidden class="anchor" aria-hidden="true" href="#bash-scripting">#</a></h3>
+<p>Now, you can make a <code>.sh</code> script which consists of various terminal commands in order to execute the <code>/home/dongookson/test_scripts/main.py</code> python script.</p>
+<p>When scripting the <code>cron.sh</code> file, just recall the commands that you would normally give the terminal. In this case, it can be,</p>
+<p><strong><em>cron.sh</em></strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>python3 /home/dongookson/test_scripts/main.py
+</code></pre></td></tr></table>
+</div>
+</div><p>The first part is the shebang. This will run the <code>.sh</code> file with the shell in the shebang directory.</p>
+<p>But, you can see that something is missing.</p>
+<p>Yes, we did not activate conda environment. In my case, this part is not necessary as I&rsquo;ve already set the <code>PATH</code> in the crontab to the <code>prod</code> environment in the above.</p>
+<h3 id="editing-crontab">Editing <code>crontab</code><a hidden class="anchor" aria-hidden="true" href="#editing-crontab">#</a></h3>
+<p>Given that all the steps above are covered, we can add the cronjob to the <code>crontab</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">(</span>base<span class="o">)</span> dongookson➜~» sudo crontab -e
+</code></pre></td></tr></table>
+</div>
+</div><p><strong><em>crontab</em></strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">PATH</span><span class="o">=</span>/Users/dongookson/opt/anaconda3/envs/prod/bin
+* * * * * /home/dongookson/cron.sh &gt;&gt; /home/dongookson/clogs.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>The second line is the cronjob which is</p>
+<ol>
+<li>Run the job every minute.</li>
+<li>The job is to run the <code>cron.sh</code> as a shell script(note that just referencing the shell script will run the commands inside the script due to the shebang)</li>
+<li>Append(&raquo;) terminal outputs to <code>/home/dongookson/clogs.log</code></li>
+<li>If an error occurs treat this as a terminal output(<code>2&gt;&amp;1</code>)</li>
+</ol>
+<h3 id="result">Result<a hidden class="anchor" aria-hidden="true" href="#result">#</a></h3>
+<p>I should now get logs in <code>clogs.log</code>. We can see that the <code>foo</code> function was called every minute.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">(</span>base<span class="o">)</span> dongookson➜~» cat clogs.log
+foo------------------------------------------
+Foo was called! 2021-04-16 13:47:01.454232
+------------------------------------------foo
+foo------------------------------------------
+Foo was called! 2021-04-16 13:48:01.489774
+------------------------------------------foo
+foo------------------------------------------
+Foo was called! 2021-04-16 13:49:01.529458
+------------------------------------------foo
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="troubleshooting">Troubleshooting<a hidden class="anchor" aria-hidden="true" href="#troubleshooting">#</a></h3>
+<p>Sometimes import problems might occur when you are importing local packages or when you want to run a python script which is not located at the top level in your code repository. From the example above, let&rsquo;s say you want to run <code>resource.py</code> under <code>test_scripts/src/</code>.</p>
+<p>Then I recommend modifying your <code>crontab</code> by adding a <code>PYTHONPATH</code> variable. This variable is an additional directory where your python interpreter will look for modules or packages. So, if you are using custom python libraries outside of the global python package directory(<code>site-packages</code>), this is a mandatory step for running a cronjob.</p>
+<p><strong><em>crontab</em></strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">PATH</span><span class="o">=</span>/Users/dongookson/opt/anaconda3/envs/prod/bin
+<span class="nv">PYTHONPATH</span><span class="o">=</span>/home/dongookson/test_scripts
+* * * * * /home/dongookson/cron.sh &gt;&gt; /home/dongookson/clogs.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://donny-son.github.io/tags/python/">python</a></li>
+      <li><a href="https://donny-son.github.io/tags/anaconda/">anaconda</a></li>
+      <li><a href="https://donny-son.github.io/tags/conda-environment/">conda environment</a></li>
+      <li><a href="https://donny-son.github.io/tags/unix/">unix</a></li>
+      <li><a href="https://donny-son.github.io/tags/cron/">cron</a></li>
+      <li><a href="https://donny-son.github.io/tags/automation/">automation</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://donny-son.github.io/posts/r-tips-and-tricks/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>R Tips and Tricks</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer">
+    <span>&copy; 2021 <a href="https://donny-son.github.io/">Don&#39;s Thoughts</a></span>
+    
+    
+    
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
