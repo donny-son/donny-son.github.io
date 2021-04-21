@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Don&#39;s Thoughts</title>
+    <link>https://donny-son.github.io/tags/git/</link>
+    <description>Recent content in git on Don&#39;s Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 21 Apr 2021 22:01:23 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Revert and Reset Simplified</title>
+      <link>https://donny-son.github.io/posts/git-revert-and-reset-simplified/</link>
+      <pubDate>Wed, 21 Apr 2021 22:01:23 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/git-revert-and-reset-simplified/</guid>
+      <description>“If you travel back into your own past, that destination becomes your future, and your former present becomes the past, which can&amp;rsquo;t now be changed by your new future.”
+-Hulk from Avengers: Endgame
+ Revert and Reset are git commands that come in handy when you need to organize commits or delete them permanently. I will compare these commands how they differ and when they might become useful for a project.</description>
+    </item>
+    
+  </channel>
+</rss>
