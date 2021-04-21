@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Using Fish Shell in M1 Macs | Don&#39;s Thoughts</title>
+<meta name="keywords" content="shell, fish, mac, Apple Silicon, m1" />
+<meta name="description" content="Recently I have decieded to change my default shell to fish. For the following reasons.
+  Z shell was getting slower due to various packages that I rarely use.
+  Wanted to keep a simple configuration file in my ./config folder.
+  Did not want to spend time on configuration.
+  Well, to tell the truth, zsh was blazing fast in my M1 macbook air, but on my other intel macs the startup time took 2~3 seconds, which was apparently the amount of time that can drive you crazy.">
+<meta name="author" content="Me">
+<link rel="canonical" href="https://donny-son.github.io/posts/using-fish-shell-in-m1-macs/" />
+<meta name="google-site-verification" content="XYZabc" />
+<meta name="yandex-verification" content="XYZabc" />
+<meta name="msvalidate.01" content="XYZabc" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.bc435bed1061be2618667408894ae8a5d27c970831ce57f287e42f911918fcbc.css" integrity="sha256-vENb7RBhviYYZnQIiUropdJ8lwgxzlfyh&#43;QvkRkY/Lw=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://donny-son.github.io/programmer.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://donny-son.github.io/programmer.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://donny-son.github.io/programmer.png">
+<link rel="apple-touch-icon" href="https://donny-son.github.io/programmer.png">
+<link rel="mask-icon" href="https://donny-son.github.io/programmer.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.82.0" />
+
+    <script>
+    "use strict";
+
+    !function() {
+    var t = window.driftt = window.drift = window.driftt || [];
+    if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+        t.factory = function(e) {
+        return function() {
+            var n = Array.prototype.slice.call(arguments);
+            return n.unshift(e), t.push(n), t;
+        };
+        }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+        }), t.load = function(t) {
+        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+        var i = document.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(o, i);
+        };
+    }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('5h33nvymhycm');
+    </script>
+
+
+<meta property="og:title" content="Using Fish Shell in M1 Macs" />
+<meta property="og:description" content="Recently I have decieded to change my default shell to fish. For the following reasons.
+  Z shell was getting slower due to various packages that I rarely use.
+  Wanted to keep a simple configuration file in my ./config folder.
+  Did not want to spend time on configuration.
+  Well, to tell the truth, zsh was blazing fast in my M1 macbook air, but on my other intel macs the startup time took 2~3 seconds, which was apparently the amount of time that can drive you crazy." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://donny-son.github.io/posts/using-fish-shell-in-m1-macs/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-04-21T23:18:20&#43;09:00" />
+<meta property="article:modified_time" content="2021-04-21T23:18:20&#43;09:00" /><meta property="og:site_name" content="donsThoughts" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using Fish Shell in M1 Macs"/>
+<meta name="twitter:description" content="Recently I have decieded to change my default shell to fish. For the following reasons.
+  Z shell was getting slower due to various packages that I rarely use.
+  Wanted to keep a simple configuration file in my ./config folder.
+  Did not want to spend time on configuration.
+  Well, to tell the truth, zsh was blazing fast in my M1 macbook air, but on my other intel macs the startup time took 2~3 seconds, which was apparently the amount of time that can drive you crazy."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://donny-son.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Using Fish Shell in M1 Macs",
+      "item": "https://donny-son.github.io/posts/using-fish-shell-in-m1-macs/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Using Fish Shell in M1 Macs",
+  "name": "Using Fish Shell in M1 Macs",
+  "description": "Recently I have decieded to change my default shell to fish. For the following reasons.\n  Z shell was getting slower due to various packages that I rarely use.\n  Wanted to keep a simple configuration file in my ./config folder.\n  Did not want to spend time on configuration.\n  Well, to tell the truth, zsh was blazing fast in my M1 macbook air, but on my other intel macs the startup time took 2~3 seconds, which was apparently the amount of time that can drive you crazy.",
+  "keywords": [
+    "shell", "fish", "mac", "Apple Silicon", "m1"
+  ],
+  "articleBody": "Recently I have decieded to change my default shell to fish. For the following reasons.\n  Z shell was getting slower due to various packages that I rarely use.\n  Wanted to keep a simple configuration file in my ./config folder.\n  Did not want to spend time on configuration.\n  Well, to tell the truth, zsh was blazing fast in my M1 macbook air, but on my other intel macs the startup time took 2~3 seconds, which was apparently the amount of time that can drive you crazy.\nTroubleshooting Since homebrew is natively supported on Apple Silicon architectures, I installed fish using, brew install fish. And it worked fine. However, when I added the path of the installed fish(/opt/homebrew/fish) to /etc/shells it did not work, giving me chsh: fish: non-standard shell.\nHow to install fish to your m1 mac   Go to the fish homepage and download the installer.   Check your fish path. It should be /usr/local/bin/fish.\n  1  which fish   Append the fish path to your /etc/shells with sudo permissions.  1 2  sudo vim /etc/shells # then dd /usr/local/bin/fish   Then the file would look like this. Use chsh command to change default shell.  1  chsh -s /usr/local/bin/fish   If you exit your current shell and restart your terminal then it would open running the fish shell.\n",
+  "wordCount" : "211",
+  "inLanguage": "en",
+  "datePublished": "2021-04-21T23:18:20+09:00",
+  "dateModified": "2021-04-21T23:18:20+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "Me"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://donny-son.github.io/posts/using-fish-shell-in-m1-macs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Don's Thoughts",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://donny-son.github.io/programmer.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://donny-son.github.io/" accesskey="h" title="  (Alt + H)">
+                <img src="/new-homebtn.gif" alt="logo" aria-label="logo"
+                    height="30"> </a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://donny-son.github.io/posts/" title="posts">
+                    <span>posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://donny-son.github.io/search/" title="search (Alt &#43; /)" accesskey=/>
+                    <span>search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://donny-son.github.io/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://donny-son.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://donny-son.github.io/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Using Fish Shell in M1 Macs
+    </h1>
+    <div class="post-meta">April 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <div class="details">Table of Contents</div>
+        </summary>
+        <div class="inner"><ul>
+                <li>
+                    <a href="#troubleshooting" aria-label="Troubleshooting">Troubleshooting</a></li>
+                <li>
+                    <a href="#how-to-install-fish-to-your-m1-mac" aria-label="How to install fish to your m1 mac">How to install fish to your m1 mac</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Recently I have decieded to change my default shell to <a href="https://fishshell.com">fish</a>. For the following reasons.</p>
+<ol>
+<li>
+<p>Z shell was getting slower due to various packages that I rarely use.</p>
+</li>
+<li>
+<p>Wanted to keep a simple configuration file in my <code>./config</code> folder.</p>
+</li>
+<li>
+<p>Did not want to spend time on configuration.</p>
+</li>
+</ol>
+<p>Well, to tell the truth, zsh was blazing fast in my M1 macbook air, but on my other intel macs the startup time took 2~3 seconds, which was apparently the amount of time that can drive you crazy.</p>
+<h2 id="troubleshooting">Troubleshooting<a hidden class="anchor" aria-hidden="true" href="#troubleshooting">#</a></h2>
+<p>Since <code>homebrew</code> is natively supported on Apple Silicon architectures, I installed <code>fish</code> using, <code>brew install fish</code>. And it worked fine. However, when I added the path of the installed fish(<code>/opt/homebrew/fish</code>) to <code>/etc/shells</code> it did not work, giving me <code>chsh: fish: non-standard shell</code>.</p>
+<h2 id="how-to-install-fish-to-your-m1-mac">How to install fish to your m1 mac<a hidden class="anchor" aria-hidden="true" href="#how-to-install-fish-to-your-m1-mac">#</a></h2>
+<ol>
+<li>
+<p>Go to the <a href="https://fishshell.com">fish</a> homepage and download the installer.
+<img loading="lazy" src="fish.png" alt=""  />
+</p>
+</li>
+<li>
+<p>Check your <code>fish</code> path. It should be <code>/usr/local/bin/fish</code>.</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">which fish
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Append the <code>fish</code> path to your <code>/etc/shells</code> with sudo permissions.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo vim /etc/shells
+<span class="c1"># then dd /usr/local/bin/fish</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Then the file would look like this.
+<img loading="lazy" src="2.png" alt=""  />
+</p>
+<ol start="4">
+<li>Use <code>chsh</code> command to change default shell.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">chsh -s /usr/local/bin/fish
+</code></pre></td></tr></table>
+</div>
+</div><p>If you exit your current shell and restart your terminal then it would open running the fish shell.</p>
+
+</div>
+  <script src="https://utteranc.es/client.js"
+          repo="donny-son/blog-comments"
+          issue-term="pathname"
+          theme="github-dark-orange"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://donny-son.github.io/tags/shell/">shell</a></li>
+      <li><a href="https://donny-son.github.io/tags/fish/">fish</a></li>
+      <li><a href="https://donny-son.github.io/tags/mac/">mac</a></li>
+      <li><a href="https://donny-son.github.io/tags/apple-silicon/">Apple Silicon</a></li>
+      <li><a href="https://donny-son.github.io/tags/m1/">m1</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://donny-son.github.io/posts/git-revert-and-reset-simplified/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>Git Revert and Reset Simplified</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer">
+    <span>&copy; 2021 <a href="https://donny-son.github.io/">Don&#39;s Thoughts</a></span>
+    
+    
+    
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
