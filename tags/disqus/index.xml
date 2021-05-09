@@ -12,7 +12,7 @@
       <pubDate>Sun, 18 Apr 2021 15:05:46 +0900</pubDate>
       
       <guid>https://donny-son.github.io/posts/add-comments-and-chatbots-to-your-hugo-website/</guid>
-      <description>Add comments and chatbots on your Hugo website INTRO If you’ve started hosting a static site for blog posts or as an portfolio website, you can implement dynamic features such as comment sections and chat services by delegating these functions to service providers such as Disqus or Drift. In this article I’ll walk you through how I’ve implemented these features on my website built with Hugo.
+      <description>INTRO If you’ve started hosting a static site for blog posts or as an portfolio website, you can implement dynamic features such as comment sections and chat services by delegating these functions to service providers such as Disqus or Drift. In this article I’ll walk you through how I’ve implemented these features on my website built with Hugo.
 Disqus and Drift Disqus Disqus offers the comment plugin feature for your website.</description>
     </item>
     
