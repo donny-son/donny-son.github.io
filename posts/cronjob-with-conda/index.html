@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Cronjob With Conda | Don&#39;s Thoughts</title>
+<title>Setting up a cronjob that uses conda environment | Don&#39;s Thoughts</title>
 <meta name="keywords" content="python, anaconda, conda environment, unix, cron, automation" />
 <meta name="description" content="How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.
 TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/anaconda3/envs/&lt;env name&gt;/bin in your crontab.">
@@ -16,7 +16,7 @@ TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/
 <meta name="msvalidate.01" content="XYZabc" />
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.d02bf6b2cec3bd9f67202617c5f8c8ea78de6fad35a6c434d49a79cc5ca9b8b1.css" integrity="sha256-0Cv2ss7DvZ9nICYXxfjI6njeb601psQ01Jp5zFypuLE=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.9953ebce97866965f30a5d09f7f622dc1ee5662f1219c40c79537e7730e1cc36.css" integrity="sha256-mVPrzpeGaWXzCl0J9/Yi3B7lZi8SGcQMeVN&#43;dzDhzDY=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://donny-son.github.io/programmer.png">
@@ -26,7 +26,7 @@ TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/
 <link rel="mask-icon" href="https://donny-son.github.io/programmer.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.82.0" />
 
     <script>
     "use strict";
@@ -56,7 +56,7 @@ TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/
     </script>
 
 
-<meta property="og:title" content="Cronjob With Conda" />
+<meta property="og:title" content="Setting up a cronjob that uses conda environment" />
 <meta property="og:description" content="How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.
 TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/anaconda3/envs/&lt;env name&gt;/bin in your crontab." />
 <meta property="og:type" content="article" />
@@ -65,7 +65,7 @@ TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/
 <meta property="article:modified_time" content="2021-04-17T09:47:32&#43;09:00" /><meta property="og:site_name" content="donsThoughts" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Cronjob With Conda"/>
+<meta name="twitter:title" content="Setting up a cronjob that uses conda environment"/>
 <meta name="twitter:description" content="How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.
 TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/anaconda3/envs/&lt;env name&gt;/bin in your crontab."/>
 
@@ -84,7 +84,7 @@ TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Cronjob With Conda",
+      "name": "Setting up a cronjob that uses conda environment",
       "item": "https://donny-son.github.io/posts/cronjob-with-conda/"
     }
   ]
@@ -94,8 +94,8 @@ TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Cronjob With Conda",
-  "name": "Cronjob With Conda",
+  "headline": "Setting up a cronjob that uses conda environment",
+  "name": "Setting up a cronjob that uses conda environment",
   "description": "How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.\nTL;DR: Don\u0026rsquo;t try to use conda activate \u0026lt;env name\u0026gt;. Set PATH to /opt/anaconda3/envs/\u0026lt;env name\u0026gt;/bin in your crontab.",
   "keywords": [
     "python", "anaconda", "conda environment", "unix", "cron", "automation"
@@ -170,7 +170,7 @@ TL;DR: Don&rsquo;t try to use conda activate &lt;env name&gt;. Set PATH to /opt/
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://donny-son.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://donny-son.github.io/posts/">Posts</a></div>
     <h1 class="post-title">
-      Cronjob With Conda
+      Setting up a cronjob that uses conda environment
     </h1>
     <div class="post-meta">April 17, 2021&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Me
 </div>

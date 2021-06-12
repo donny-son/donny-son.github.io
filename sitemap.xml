@@ -3,37 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://donny-son.github.io/</loc>
-    <lastmod>2021-05-03T11:19:07+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/posts/easily-move-files-in-mac-using-preview/</loc>
-    <lastmod>2021-05-03T11:19:07+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/tags/mac/</loc>
-    <lastmod>2021-05-03T11:19:07+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/posts/</loc>
-    <lastmod>2021-05-03T11:19:07+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/tags/</loc>
-    <lastmod>2021-05-03T11:19:07+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/tags/tips/</loc>
-    <lastmod>2021-05-03T11:19:07+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/tags/apple-silicon/</loc>
-    <lastmod>2021-04-21T23:18:20+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/tags/fish/</loc>
-    <lastmod>2021-04-21T23:18:20+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/tags/m1/</loc>
-    <lastmod>2021-04-21T23:18:20+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/tags/shell/</loc>
-    <lastmod>2021-04-21T23:18:20+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/posts/using-fish-shell-in-m1-macs/</loc>
-    <lastmod>2021-04-21T23:18:20+09:00</lastmod>
+    <lastmod>2021-04-21T22:01:23+09:00</lastmod>
   </url><url>
     <loc>https://donny-son.github.io/tags/git/</loc>
     <lastmod>2021-04-21T22:01:23+09:00</lastmod>
@@ -41,14 +11,14 @@
     <loc>https://donny-son.github.io/posts/git-revert-and-reset-simplified/</loc>
     <lastmod>2021-04-21T22:01:23+09:00</lastmod>
   </url><url>
-    <loc>https://donny-son.github.io/tags/version-control/</loc>
+    <loc>https://donny-son.github.io/posts/</loc>
     <lastmod>2021-04-21T22:01:23+09:00</lastmod>
   </url><url>
-    <loc>https://donny-son.github.io/posts/switching-to-moonlander-keyboard/</loc>
-    <lastmod>2021-04-19T23:36:15+09:00</lastmod>
+    <loc>https://donny-son.github.io/tags/</loc>
+    <lastmod>2021-04-21T22:01:23+09:00</lastmod>
   </url><url>
-    <loc>https://donny-son.github.io/tags/update/</loc>
-    <lastmod>2021-04-19T23:36:15+09:00</lastmod>
+    <loc>https://donny-son.github.io/tags/version-control/</loc>
+    <lastmod>2021-04-21T22:01:23+09:00</lastmod>
   </url><url>
     <loc>https://donny-son.github.io/posts/add-comments-and-chatbots-to-your-hugo-website/</loc>
     <lastmod>2021-04-18T15:05:46+09:00</lastmod>
@@ -83,10 +53,10 @@
     <loc>https://donny-son.github.io/tags/cron/</loc>
     <lastmod>2021-04-17T09:47:32+09:00</lastmod>
   </url><url>
-    <loc>https://donny-son.github.io/posts/cronjob-with-conda/</loc>
+    <loc>https://donny-son.github.io/tags/python/</loc>
     <lastmod>2021-04-17T09:47:32+09:00</lastmod>
   </url><url>
-    <loc>https://donny-son.github.io/tags/python/</loc>
+    <loc>https://donny-son.github.io/posts/cronjob-with-conda/</loc>
     <lastmod>2021-04-17T09:47:32+09:00</lastmod>
   </url><url>
     <loc>https://donny-son.github.io/tags/unix/</loc>
@@ -116,14 +86,8 @@
     <loc>https://donny-son.github.io/posts/upload-to-pypi/</loc>
     <lastmod>2021-04-15T00:01:49+09:00</lastmod>
   </url><url>
-    <loc>https://donny-son.github.io/posts/venv-vs-conda/</loc>
-    <lastmod>2021-04-14T22:14:21+09:00</lastmod>
-  </url><url>
     <loc>https://donny-son.github.io/about/</loc>
     <lastmod>2021-04-14T15:42:51+09:00</lastmod>
-  </url><url>
-    <loc>https://donny-son.github.io/posts/first/</loc>
-    <lastmod>2021-04-14T15:35:21+09:00</lastmod>
   </url><url>
     <loc>https://donny-son.github.io/categories/</loc>
   </url><url>

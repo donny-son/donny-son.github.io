@@ -5,30 +5,7 @@
     <link>https://donny-son.github.io/posts/</link>
     <description>Recent content in Posts on Don&#39;s Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 03 May 2021 11:19:07 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Easily Move Files in Mac Using Preview</title>
-      <link>https://donny-son.github.io/posts/easily-move-files-in-mac-using-preview/</link>
-      <pubDate>Mon, 03 May 2021 11:19:07 +0900</pubDate>
-      
-      <guid>https://donny-son.github.io/posts/easily-move-files-in-mac-using-preview/</guid>
-      <description>You can easily move downloaded files in Mac using Preview. When you download a .pdf file, the Preview app will popup displaying the content. When you hover your mouse to the title of the preview in the top panel, an icon will appear on the left. Then simply click and hold the icon drag it in to the desired directory(I assume that you have already opened the directory Finder).
- Other downloaded files unsupported by Preview can also be moved in a similar fashion.</description>
-    </item>
-    
-    <item>
-      <title>Using Fish Shell in M1 Macs</title>
-      <link>https://donny-son.github.io/posts/using-fish-shell-in-m1-macs/</link>
-      <pubDate>Wed, 21 Apr 2021 23:18:20 +0900</pubDate>
-      
-      <guid>https://donny-son.github.io/posts/using-fish-shell-in-m1-macs/</guid>
-      <description>Recently I have decieded to change my default shell to fish. For the following reasons.
-  Z shell was getting slower due to various packages that I rarely use.
-  Wanted to keep a simple configuration file in my ./config folder.
-  Did not want to spend time on configuration.
-  Well, to tell the truth, zsh was blazing fast in my M1 macbook air, but on my other intel macs the startup time took 2~3 seconds, which was apparently the amount of time that can drive you crazy.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 21 Apr 2021 22:01:23 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git Revert and Reset Simplified</title>
       <link>https://donny-son.github.io/posts/git-revert-and-reset-simplified/</link>
@@ -38,15 +15,6 @@
       <description>“If you travel back into your own past, that destination becomes your future, and your former present becomes the past, which can&amp;rsquo;t now be changed by your new future.”
 -Hulk from Avengers: Endgame
  Revert and Reset are git commands that come in handy when you need to organize commits or delete them permanently. I will compare these commands how they differ and when they might become useful for a project.</description>
-    </item>
-    
-    <item>
-      <title>Switching to Moonlander Keyboard</title>
-      <link>https://donny-son.github.io/posts/switching-to-moonlander-keyboard/</link>
-      <pubDate>Mon, 19 Apr 2021 23:36:15 +0900</pubDate>
-      
-      <guid>https://donny-son.github.io/posts/switching-to-moonlander-keyboard/</guid>
-      <description>[UPDATE]   So, my moonlander keyboard from ZSA arrived today. Ah, the hopes and dreams I had for this keyboard&amp;hellip; But, after actually typing on it, I&amp;rsquo;m very nervous right now. There was a WPM test on their oryx configurator and I naturally tried it out. For first several times, it couldn&amp;rsquo;t even calculate my WPM because accuracy was below 95%. Eventually I ended up getting 22, this is my WPM now.</description>
     </item>
     
     <item>
@@ -60,7 +28,7 @@ Disqus and Drift Disqus Disqus offers the comment plugin feature for your websit
     </item>
     
     <item>
-      <title>Cronjob With Conda</title>
+      <title>Setting up a cronjob that uses conda environment</title>
       <link>https://donny-son.github.io/posts/cronjob-with-conda/</link>
       <pubDate>Sat, 17 Apr 2021 09:47:32 +0900</pubDate>
       
@@ -81,7 +49,7 @@ Import multiple libraries at once Since R has some object-oriented goodness, imp
     </item>
     
     <item>
-      <title>Creating Gui for Your Python App</title>
+      <title>Creating a GUI for your Python program</title>
       <link>https://donny-son.github.io/posts/creating-gui-for-your-python-app/</link>
       <pubDate>Thu, 15 Apr 2021 08:05:55 +0900</pubDate>
       
@@ -91,7 +59,7 @@ Import multiple libraries at once Since R has some object-oriented goodness, imp
     </item>
     
     <item>
-      <title>Upload to Pypi</title>
+      <title>Uploading My First Package to Pypi</title>
       <link>https://donny-son.github.io/posts/upload-to-pypi/</link>
       <pubDate>Thu, 15 Apr 2021 00:01:49 +0900</pubDate>
       
@@ -99,24 +67,6 @@ Import multiple libraries at once Since R has some object-oriented goodness, imp
       <description>Intro Few days ago, I published my first python package to pypi. Here&amp;rsquo;s what I&amp;rsquo;ve learned.
   Tools build and twine were the two fundamental packages. The build package literally builds a repository into a distributable compressed file. This simple command python3 -m build will create a dist/ directory which contains the tar.gz and whl files.
 twine can directly upload your repository to pypi and testpypi. testpypi is nothing more than a test version of pypi.</description>
-    </item>
-    
-    <item>
-      <title>venv vs conda</title>
-      <link>https://donny-son.github.io/posts/venv-vs-conda/</link>
-      <pubDate>Wed, 14 Apr 2021 22:14:21 +0900</pubDate>
-      
-      <guid>https://donny-son.github.io/posts/venv-vs-conda/</guid>
-      <description>Comparison between `conda` and `venv`</description>
-    </item>
-    
-    <item>
-      <title>init post</title>
-      <link>https://donny-son.github.io/posts/first/</link>
-      <pubDate>Wed, 14 Apr 2021 15:35:21 +0900</pubDate>
-      
-      <guid>https://donny-son.github.io/posts/first/</guid>
-      <description>Hi 👋 I will be uploading the things I&amp;rsquo;ve learned, hopefully, everday. ✌️</description>
     </item>
     
   </channel>
