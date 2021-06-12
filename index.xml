@@ -75,7 +75,13 @@ twine can directly upload your repository to pypi and testpypi. testpypi is noth
       <pubDate>Wed, 14 Apr 2021 15:42:51 +0900</pubDate>
       
       <guid>https://donny-son.github.io/about/</guid>
-      <description>A little information about myself...</description>
+      <description>Hi! 👋
+  I&amp;rsquo;m currently pursuing my M.S. degree in Statistics &amp;amp; Data Science at Yonsei University.
+I&amp;rsquo;m also actively involved in the following projects.
+  Samsung Medical Hospital
+Opthalmology Dept.
+ Automated data extraction from various PDF charts(Python) Machine learning applications for fundus examinations(Python, Tensorflow) Statistical analysis and visualization(R)    National Cancer Center
+ Spatial statistics and computation software development(Go) DataOps(ETL, Modeling, etc)    Yonsei Statistics &amp;amp; Data Science BK21</description>
     </item>
     
     
