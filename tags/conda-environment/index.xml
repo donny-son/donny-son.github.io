@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 17 Apr 2021 09:47:32 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/conda-environment/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Setting up a cronjob that uses conda environment</title>
+      <title>Cronjob With Conda</title>
       <link>https://donny-son.github.io/posts/cronjob-with-conda/</link>
       <pubDate>Sat, 17 Apr 2021 09:47:32 +0900</pubDate>
       

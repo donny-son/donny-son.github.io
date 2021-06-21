@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ggplot on Don&#39;s Thoughts</title>
+    <link>https://donny-son.github.io/tags/ggplot/</link>
+    <description>Recent content in ggplot on Don&#39;s Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 22 Jun 2021 06:21:04 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Drawing Gemstones With ggplot</title>
+      <link>https://donny-son.github.io/posts/drawing-gemstones-with-ggplot/</link>
+      <pubDate>Tue, 22 Jun 2021 06:21:04 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/drawing-gemstones-with-ggplot/</guid>
+      <description>Intro Composition of irregular and complex patterns can be simplified with ggplot; graphical package used in R.
+This project aims to recreate various crystallic shapes via random sampling from uniform and standard normal distribution. Additional to the ggplot2 package there are two more dependencies; cowplot and RColorBrewer. cowplot is required for importing the theme_nothing() function(minimal theme without any legends or axis) and the plot_grid() function which enables plotting multiple ggplot objects in a single page.</description>
+    </item>
+    
+  </channel>
+</rss>
