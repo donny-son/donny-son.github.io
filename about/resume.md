@@ -1,6 +1,4 @@
----
-title-heading: false
----
+<h1></h1>
 <center><span style="font-family:Didot; font-size:2.5em;">Dongook Son</span></center>
 <center><span style="font-family:Didot; font-size:1.5em;">
    <a href="https://github.com/donny-son">GitHub</a>
@@ -81,6 +79,7 @@ title-heading: false
 
 **Network** 
 > - Home machine learning server management(Debian HPC ML server, Synology NAS): Running a custom GPU machine learning home server on Debian based machine and a separate NAS server for data storage.
+> - Running a custom GitLab server for private code repository.
 
 
 <span style="font-family:Didot; font-size:2em;">Programming Languages</span>
