@@ -1,12 +1,16 @@
-<center><span style="font-family:Didot; font-size:2.5em;">Daffy Duck</span></center>
-<center><span style="font-family:Didot; font-size:1.5em;">**Website:**[https://www.monique.tech](https://www.monique.tech)</span></center>
-<center><span style="font-family:Didot; font-size:1.5em;">**Github:**[yourGithub](yourGithubLinkURL)</span></center>
-<center><span style="font-family:Didot; font-size:1.5em;">**Email:**[youremail@youremail.com](youremail@youremail.com)</span></center>
-<center><span style="font-family:Didot; font-size:1.5em;">Gulla Gulla Island, MD USA
+<center><span style="font-family:Didot; font-size:2.5em;">Dongook Son</span></center>
+<center><span style="font-family:Didot; font-size:1.5em;">
+   <a href="https://github.com/donny-son">GitHub</a>
+   |
+   <a href="https://www.linkedin.com/in/dongook-son">LinkedIn</a>
+   |
+   <a href="mailto:dongook.son@yonsei.ac.kr">E-Mail</a>
+</span></center>
+<center><span style="font-family:Didot; font-size:1.5em;">Seoul, South Korea</span></center>
 </span></center>
 
 <span style="font-family:Didot; font-size:2em;">Objective</span>
-> Place your objective here! We can talk about our goals in software development or even how you aspire to be a race car driver. Just make it pertinent to the position your applying for in a debonaire way. Like, 'Oh I happen to be looking for a position where I can utilize my management experience and love for ice cream and you just happen to be Dairy Queen'.
+> My objective
 
 
 
@@ -14,40 +18,67 @@
 <br />
 - - - -
 
-**Purdue University**                                August 1989- December 1993 
+**Yonsei University Graduate School of Statistics and Data Science**              March 2020 - Feb 2022 
    
-> 1. Here you can place all of your cool accomplishments
-> 2. Like that one time you won the Google Hackathon
-> 3. Or those really cool honor societies you joined
-> 4. Choose these highlights based off of the position you are applying for so you can really shine
+> 1. **Field of Study**: Data Science and Machine Learning Operations(DataOps & MLOps), Multi-dimensional Convolutional Neural Networks
+> 1. **Cumulative GPA**: 4.03 / 4.30
+> 1. **Course Work**: 
+>     - *Mathematics & Statistics*: Spatiotemporal Analysis, Statistical Learning Theory, Linear Models, Bayesian Statistics, Multivariate Analysis
+>     - *Engineering*: Machine Learning and Application, Algorithms and Applications, Sports Bigdata Analysis
+> 1. **Projects**: 
+>     - *HPC(High Performance Computing) System Administrator for Graduate School of Statistics and Data Science* : Setup and maintanence of HPC server on cloud(NCP) and on-premise for Machine Learning graduate researchers. (2021 Fall)
+>     - *Server Management / MLOps Consultation for Graduate School of Business, Finance Lab* : Hardware, software and operations setup/maintanence for supply-chain financial data analysis research team. Educated researchers and professor of DevOps(containerization, version control, TDD, etc) concepts and its necessity and applications on Machine Learning research. Also introduced novel knowledge database software(Obsidian) in order to pass on knowledge as a graph structure. (2021 Spring)
+>     - *[PUBG Spatiotemporal Analysis](https://github.com/donny-son/PUBG-spatio-temporal-analysis)*: Engineered PUBG telemetry data pipeline(API request -> RDBMS -> Transformation via R) by employing GCP micro server and applied spatiotemporal analytics to discover and visualize optimal early-stage survival strategy in "Karakin" via Kernel Density Estimation. (2020 Spring)
+> 1. **Teaching Experience**: 
+>     - *Introductory Statistics* (2020 Spring)
 
-<span style="font-family:Didot; font-size:2em;">Technical Experience</span>
+**Yonsei University School of Applied Statistics**                                March 2014 - Feb 2020 
+   
+> 1. **Honors and Awards**: 
+>     - Honor Student (2017 Spring)
+>    - [Seoul Credit Guarantee Foundation Data Competition(서울신용보증재단 빅데이터 경진대회)](https://news.mt.co.kr/mtview.php?no=2016090706008239915): Prediction of credit level variability of small-business owners by merging commercial, geographical and demographical variables with provided data via Random Forest method. (2016 Spring) 
+> 1. **Course Work**: 
+>     - *Mathematics & Statistics*: Bayesian Statistics, Numerical Analysis, Linear Algebra, Calculus, Linear Regression, Mathematical Statistics, Stochastic Processes, Non-parametric Statistics, Categorial Data Analysis
+>     - *Engineering*: Data Analysis and Database Architecture, Deep Learning, Data Science Application, Simulation, Computer Data Processing
+> 1. **Extra-Curricular Activities**:
+>     - *[Brave Penguins](https://www.instagram.com/bravepenguins)*: Founder and Former President of Brave Penguins, a student accelerator organization for student entrepreneurs. Created a platform for students to get involved in the startup ecosystem and to share their ideas by establishing "Igloo" (a coworking start-up facility located in Business School) and organizing "SURF 2019" (the first-ever student-driven start-up competition/festival for student ventures).
+
+**Hyundai High School**                               March 2010 - Feb 2014 
+
+> 1. **Honors and Awards**: 
+>     - Awarded academic scholarship (2013)
+
+<span style="font-family:Didot; font-size:2em;">Technical Experience - Professional</span>
 <br />
 - - - -
 
-**Product Manager New York, NY**
-**Instagram, Technical Product Manager**               January 2017 – Present
-> * Create bullet points that reflect action, make the action word the first word in the bullet point
-> * Communicate important job responsibilities that are relevant to the position at hand
-> * Use numbers where applicable. Don't just say 'I increased sales' say 'I increased sales by 10%'
-> * Always place actions in the present tense, you still possess these skills.
+*Data/Development Operations, Researcher* | **National Cancer Center, Air-health Research Team** February 2021 – Present
+> - Centralization and standardization of geographical data via PostGIS.
+> - Automation of ETL pipelines of geographical datalakes via serverless architecture(AWS Lambda, Athena, Glue).
+> - Parallel computing of geographical data via R
+
+*SW Development & Deep Learning, Statiscian* | **Samsung Medical Center, Ophthalmology Department** July 2020 – Present
+> - Automation software(Python) for extracting data from clinical reports
+> - Statistical analysis and visualization of visual field data(R)
+> - Fundus photography preprocessing pipeline(Golang)
+> - Multi-dimensional Convolutional Neural Network research(TensorFlow)
+
+*Data Engineer* | **Bagstation Inc.** January 2020 – July 2020
+> - Crawlers for Court Auction data(Python)
+> - Data pipelines for Open APIs(Python)
+> - Court Auction optimal price modeling(R, Python)
 
 
-**Technical Product Manager San Fransisco, CA**
-**Uber**, San Fransisco, CA        June 2016-January 2017
-> * Follow the same guidelines that we discussed in the first example
-> * Always as yourself 'What does this experience add to my resume? What gaps does it fill?
-> * This will help you figure out what to say!
-> * Keep your bullet points to one sentence, say more with less.
+<span style="font-family:Didot; font-size:2em;">Technical Experience - Personal</span>
+<br />
+- - - -
 
+**Automation** 
+> - Lecture downloading software(hack) for Yonsei University(www.learnus.org) - Python(`pysimplegui`)
+> - [Statistics department job notification slack bot](https://github.com/donny-son/career-yonsei-updater) - Python, GCP
 
-**Customer Service Manager West Lafayette,IN**
-**Homewood Suites** West Lafayette, IN 47906   July 2014 – June 2016
-> * All experience is pertinent experience, it's not what you've done as much as it is how you package your accomplishements
-> * An example would be using this seemingly non-technical position to showcase leader ship skills
-> * Did you communicate with cross-functional teams or people of varying technical skill levels? You can use this section to showcase that.
-> * Also remember that you want to maximize your resume for buzz words. You can figure out what these are from the job posting as well as sample resumes online. This will increase your chances of getting a call for an interview.
-
+**Network** 
+> - Home machine learning server management(Debian HPC ML server, Synology NAS): Running a custom GPU machine learning home server on Debian based machine and a separate NAS server for data storage.
 
 
 <span style="font-family:Didot; font-size:2em;">Programming Languages</span>
@@ -69,5 +100,5 @@
      
 
 - - - -
-> **Email:** yourEmail@yourEmail.com
-> **Phone:**+1(000)867-5309
+> **Email:** dongook.son@yonsei.ac.kr
+> **Phone:** +82-10-2668-8138
