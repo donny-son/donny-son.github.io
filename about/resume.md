@@ -7,7 +7,6 @@
    <a href="mailto:dongook.son@yonsei.ac.kr">E-Mail</a>
 </span></center>
 <center><span style="font-family:Didot; font-size:1.5em;">Seoul, South Korea</span></center>
-</span></center>
 
 <span style="font-family:Didot; font-size:2em;">Objective</span>
 > My objective
@@ -85,9 +84,9 @@
 <br />
 - - - -
 
-   > * Intermediate HTML, Intermediate SCSS,Intermediate CSS, Intermediate Typescript. 
-   >* **Tip: Remember every language here is *FAIR GAME*, if you don't feel comfortable coding in it, do not include it. It is all about *DEPTH* of knowledge not *BREADTH* of knowledge**
-   >* **Tip: You don't have to classify information as beginner,intermediate, advanced. You can also use years experience as well.**
+   > * Main Programming Languages: Python, Shell, R, Go 
+   > * Database Systems: RDB(PostgreSQL, MySQL), GraphDB(Neo4j)
+   > * Dev Tools: NeoVim, VSCode, Conda, Mamba
 
 <span style="font-family:Didot; font-size:2em;">Tools/Platforms</span>
 <br />
@@ -95,8 +94,9 @@
 
 > * NetBeans, Unity, Unity MonoDevelop, Photoshop, Microsoft suite,
  Adobe suite, Brackets, Visual Code Studio, and Ionic.
- > * **In lieu of this section you can also put a Foreign Languages section or a Products section if you have products in the app store** 
- > * **Tip: If all of your foreign languages are Beginner, think about whether or not you want to include them**
+> * Language Proficiency: Korean(Native), English(Native)
+> * **In lieu of this section you can also put a Foreign Languages section or a Products section if you have products in the app store** 
+> * **Tip: If all of your foreign languages are Beginner, think about whether or not you want to include them**
      
 
 - - - -
