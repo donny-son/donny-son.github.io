@@ -1,3 +1,6 @@
+---
+title-heading: false
+---
 <center><span style="font-family:Didot; font-size:2.5em;">Dongook Son</span></center>
 <center><span style="font-family:Didot; font-size:1.5em;">
    <a href="https://github.com/donny-son">GitHub</a>
