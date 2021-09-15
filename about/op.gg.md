@@ -56,7 +56,7 @@
 > - Centralization and standardization of geographical data via PostGIS.
 > - Automation of ETL pipelines of geographical datalakes via serverless architecture(AWS Lambda, Athena, Glue).
 
-> *Reference: Seonyoung Kim, PhD *
+> *Reference: Seonyoung Kim, PhD*
 
 *Server Management / Research Operation Consultant* |  **Yonsei Graduate School of Business, Finance Lab** January 2021 – July 2021
 > - Hardware, software and operations setup/maintanence for supply-chain financial data analysis research team. 
@@ -71,7 +71,7 @@
 > - Fundus photography preprocessing pipeline(Golang)
 > - Multi-dimensional Convolutional Neural Network research(Keras - Tensorflow)
 
-> *Reference: Han Jongcheol, MD, PhD*
+> *Reference: Jongcheol Han, M.D.*
 
 *Data Engineer* | **Bagstation Inc.** January 2020 – July 2020
 > - Crawlers for Court Auction data(Python)
