@@ -87,7 +87,7 @@
 
 
 **Packaging** 
-> - [`pip install tictronome`](https://github.com/donny-son/tictronome): Created a terminal tick(stdout) to eleviate mental pressure and stress while waiting for a long python process to finish.
+> - [`pip install tictronome`](https://github.com/donny-son/tictronome): Created a terminal tick(stdout) to alleviate mental pressure and stress while waiting for a long python process to finish.
 
 **Automation** 
 > - Lecture downloading software(hack) for Yonsei University(www.learnus.org) - Python(`pysimplegui`)
