@@ -1,4 +1,3 @@
-<h1></h1>
 <center><span style="font-family:Didot; font-size:2.5em;">Dongook Son</span></center>
 <center><span style="font-family:Didot; font-size:1.5em;">
    <a href="https://github.com/donny-son">GitHub</a>
@@ -10,11 +9,11 @@
 <center><span style="font-family:Didot; font-size:1.5em;">Seoul, South Korea</span></center>
 
 <span style="font-family:Didot; font-size:2em;">Objective</span>
-> My objective
+> * 
 
 
 
-<span style="font-family:Didot; font-size:2em;">Education</span>
+<span style="font-family:Didot; font-size:2em;">Academic Experience</span>
 <br />
 - - - -
 
@@ -27,7 +26,6 @@
 >     - *Engineering*: Machine Learning and Application, Algorithms and Applications, Sports Bigdata Analysis
 > 1. **Projects**: 
 >     - *HPC(High Performance Computing) System Administrator for Graduate School of Statistics and Data Science* : Setup and maintanence of HPC server on cloud(NCP) and on-premise for Machine Learning graduate researchers. (2021 Fall)
->     - *Server Management / MLOps Consultation for Graduate School of Business, Finance Lab* : Hardware, software and operations setup/maintanence for supply-chain financial data analysis research team. Educated researchers and professor of DevOps(containerization, version control, TDD, etc) concepts and its necessity and applications on Machine Learning research. Also introduced novel knowledge database software(Obsidian) in order to pass on knowledge as a graph structure. (2021 Spring)
 >     - *[PUBG Spatiotemporal Analysis](https://github.com/donny-son/PUBG-spatio-temporal-analysis)*: Engineered PUBG telemetry data pipeline(API request -> RDBMS -> Transformation via R) by employing GCP micro server and applied spatiotemporal analytics to discover and visualize optimal early-stage survival strategy in "Karakin" via Kernel Density Estimation. (2020 Spring)
 > 1. **Teaching Experience**: 
 >     - *Introductory Statistics* (2020 Spring)
@@ -48,30 +46,47 @@
 > 1. **Honors and Awards**: 
 >     - Awarded academic scholarship (2013)
 
-<span style="font-family:Didot; font-size:2em;">Technical Experience - Professional</span>
+<span style="font-family:Didot; font-size:2em;">Professional Experience</span>
 <br />
 - - - -
 
-*Data/Development Operations, Researcher* | **National Cancer Center, Air-health Research Team** February 2021 – Present
+*Data/Development Operations, Developer* | **National Cancer Center, Air-health Research Team** February 2021 – Present
+> - Parallel computing software maintanence of geographical data(R)
 > - Centralization and standardization of geographical data via PostGIS.
 > - Automation of ETL pipelines of geographical datalakes via serverless architecture(AWS Lambda, Athena, Glue).
-> - Parallel computing of geographical data via R
+
+> *Reference: Dr.Kim Sunyoung*
+
+*Server Management / Research Operation Consultant* |  **Graduate School of Business, Finance Lab** January 2021 – July 2021
+> - Hardware, software and operations setup/maintanence for supply-chain financial data analysis research team. 
+> - Educated researchers and professor of DevOps(containerization, version control, TDD, etc) concepts and its necessity and applications on Machine Learning research.
+> - Introduced novel knowledge organization software(Obsidian) in order to pass on knowledge as a graph.
+
+> *Reference: Dr.Auh Junkyeong*
 
 *SW Development & Deep Learning, Statiscian* | **Samsung Medical Center, Ophthalmology Department** July 2020 – Present
 > - Automation software(Python) for extracting data from clinical reports
 > - Statistical analysis and visualization of visual field data(R)
 > - Fundus photography preprocessing pipeline(Golang)
-> - Multi-dimensional Convolutional Neural Network research(TensorFlow)
+> - Multi-dimensional Convolutional Neural Network research(Keras - Tensorflow)
+
+> *Reference: Dr.Han Jongcheol*
 
 *Data Engineer* | **Bagstation Inc.** January 2020 – July 2020
 > - Crawlers for Court Auction data(Python)
 > - Data pipelines for Open APIs(Python)
-> - Court Auction optimal price modeling(R, Python)
+> - Court Auction optimal price modeling(R, Python)  
+
+> *Reference: Mr.Lee seunghong, Mr.Kim Seongam*
 
 
 <span style="font-family:Didot; font-size:2em;">Technical Experience - Personal</span>
 <br />
 - - - -
+
+
+**Packaging** 
+> - [`pip install tictronome`](https://github.com/donny-son/tictronome): Created a terminal tick(stdout) to eleviate mental pressure and stress while waiting for a long python process to finish.
 
 **Automation** 
 > - Lecture downloading software(hack) for Yonsei University(www.learnus.org) - Python(`pysimplegui`)
@@ -81,26 +96,46 @@
 > - Home machine learning server management(Debian HPC ML server, Synology NAS): Running a custom GPU machine learning home server on Debian based machine and a separate NAS server for data storage.
 > - Running a custom GitLab server for private code repository.
 
+**Data Art** 
+> - [Infinity Stone data art NFT](https://donny-son.github.io/posts/drawing-gemstones-with-ggplot/): From statistical distributions and random sampling through `R(ggplot2)`, created digital art and minted as NFTs in [Opensea.io](https://opensea.io/DNYSN)
+
+
+**Github blog using HUGO** 
+> - [Don's Thoughts](https://donny-son.github.io/): From statistical distributions and random sampling through `R(ggplot2)`, created digital art and minted as NFTs in [Opensea.io](https://opensea.io/DNYSN)
+
+
+<span style="font-family:Didot; font-size:2em;">Military Experience</span>
+<br />
+- - - -
+**Honorable Discharge(Sergeant)**
+> * Airborne Training: #826, Special Warfare School(ROK SWS)
+> * Interpreter Training: 5-week Special Ops interpreter training, Special Warfare Command(ROK SWK)
+> * Combined CA-CMO Training: 11th BDE(ROK SWK) - 1st BTN(1st SFG), 11th BDE
 
 <span style="font-family:Didot; font-size:2em;">Programming Languages</span>
 <br />
 - - - -
 
-   > * Main Programming Languages: Python, Shell, R, Go 
-   > * Database Systems: RDB(PostgreSQL, MySQL), GraphDB(Neo4j)
-   > * Dev Tools: NeoVim, VSCode, Conda, Mamba
+   > * Main Programming Languages: 
+   >   - Python: 3+ years 
+   >   - R: 5+ years 
+   >   - Go: 1+ years
+   >   - Shell: 1+ years
+   > * Main OS: MacOS, Linux(Debian, Ubuntu)
 
-<span style="font-family:Didot; font-size:2em;">Tools/Platforms</span>
+
+<span style="font-family:Didot; font-size:2em;">General Skills</span>
 <br />
 - - - -
 
-> * NetBeans, Unity, Unity MonoDevelop, Photoshop, Microsoft suite,
- Adobe suite, Brackets, Visual Code Studio, and Ionic.
 > * Language Proficiency: Korean(Native), English(Native)
-> * **In lieu of this section you can also put a Foreign Languages section or a Products section if you have products in the app store** 
-> * **Tip: If all of your foreign languages are Beginner, think about whether or not you want to include them**
-     
+> * Database Systems: RDB(PostgreSQL, MySQL), GraphDB(Neo4j)
+> * Cloud Frameworks: GCP, Vultr, AWS, NCP
+> * Dev Tools: Alacritty, NeoVim, Tmux, VSCode, Conda, Mamba
+> * Other Tools: Karabiner
+> * Documentation & Teamwork Related: Obsidian, Notion, Draw.io
 
 - - - -
-> **Email:** dongook.son@yonsei.ac.kr
-> **Phone:** +82-10-2668-8138
+
+> **Address:**  92 Yeoksam-ro 12, Gangnam-gu, Seoul, Korea  
+> **Phone:**    +82-10-2668-8138
