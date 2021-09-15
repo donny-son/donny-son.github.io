@@ -9,7 +9,8 @@
 <center><span style="font-family:Didot; font-size:1.5em;">Seoul, South Korea</span></center>
 
 <span style="font-family:Didot; font-size:2em;">Objective</span>
-> * 
+> * Constant exploration of bleeding-edge technologies and techniques that may improve workflow or organization.
+> * Democratic digital governance system.
 
 
 
