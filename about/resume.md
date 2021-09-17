@@ -121,7 +121,7 @@
    >   - R: 5+ years 
    >   - Go: 1+ years
    >   - Shell: 1+ years
-   > * Main OS: MacOS, Linux(Debian, Ubuntu)
+   > * Main OS: MacOS, Linux(RHEL(CentOS), Ubuntu)
 
 
 <span style="font-family:Didot; font-size:2em;">General Skills/Tools</span>
@@ -131,7 +131,7 @@
 > * Language Proficiency: Korean(Native), English(Native)
 > * Search Engine: DuckDuckGo, Google
 > * Database Systems: RDB(PostgreSQL, MySQL), GraphDB(Neo4j)
-> * Cloud Frameworks: GCP, Vultr, AWS, NCP
+> * Cloud Frameworks: GCP, AWS, NCP
 > * Dev Tools: Alacritty, NeoVim, Tmux, VSCode, Conda(Mamba), Slack
 > * Other Tools: Karabiner
 > * Documentation & Teamwork Related: Obsidian, Notion, Draw.io
@@ -140,4 +140,4 @@
 
 > **Address:**  92 Yeoksam-ro 12, Gangnam-gu, Seoul, Korea  
 > **Phone:**    +82-10-2668-8138  
-*This CV was written in markdown*
+<center style="font-style:oblique">This CV was written in markdown</center>
