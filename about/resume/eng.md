@@ -8,7 +8,8 @@
 </span></center>
 <center><span style="font-family:Didot; font-size:1.5em;">Seoul, South Korea</span></center>
 
-<span style="font-family:Didot; font-size:2em;">Description</span>
+<span style="font-family:Didot; font-size:2em;">Intro</span>
+> * Data Scientist, Machine Learning Engineer, Tech Evangelist, Hacker
 > * Student of bleeding-edge technologies that improve organization workflow and efficiency.
 
 <span style="font-family:Didot; font-size:2em;">Academic Experience</span>
