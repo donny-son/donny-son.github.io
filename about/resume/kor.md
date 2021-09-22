@@ -8,11 +8,8 @@
 </span></center>
 <center><span style="font-family:Didot; font-size:1.5em;">Seoul, South Korea</span></center>
 
-<span style="font-family:Didot; font-size:2em;">`OP.GG` 지원동기</span>
-> * PUBG 시공간 분석 프로젝트를 하면서, 또 대치동 사옥을 지나치면서 B2C Data Analytics Service를 국내에서 유일하게 성공적으로 제공하는 기업이라는 인식을 받았습니다. 이를 가능케한 분들과 에너지 그리고 지식을 나누고 싶습니다.  
-> * 현재 "옵지토론"과 같이 축적된 API 데이터를 통해 자체적인 분석 결과 및 컨텐츠들이 OP-ficial에서 조회수 최상위권에 있듯이, 이를 다양한 게임에서 더욱더 제공할 수 있다면 OP.GG는 더 큰 도약을 할 것이라는 믿음이 있습니다. 
-> * 저는 통계적 마인드, 상당한 DataOps 경험 그리고 다큐멘테이션 및 호환성에 대한 집착을 겸비하고 있습니다. 따라서 분석 설계, Data Transformation 및 분석 그리고 문서화까지 모두 가능합니다.  
-
+<span style="font-family:Didot; font-size:2em;">Description</span>
+> * Student of bleeding-edge technologies that improve organization workflow and efficiency.
 
 <span style="font-family:Didot; font-size:2em;">Academic Experience</span>
 <br />
@@ -122,7 +119,7 @@
    >   - R: 5+ years 
    >   - Go: 1+ years
    >   - Shell: 1+ years
-   > * Main OS: MacOS, Linux(Debian, Ubuntu)
+   > * Main OS: MacOS, Linux(RHEL(CentOS), Ubuntu)
 
 
 <span style="font-family:Didot; font-size:2em;">General Skills/Tools</span>
@@ -132,7 +129,7 @@
 > * Language Proficiency: Korean(Native), English(Native)
 > * Search Engine: DuckDuckGo, Google
 > * Database Systems: RDB(PostgreSQL, MySQL), GraphDB(Neo4j)
-> * Cloud Frameworks: GCP, Vultr, AWS, NCP
+> * Cloud Frameworks: GCP, AWS, NCP
 > * Dev Tools: Alacritty, NeoVim, Tmux, VSCode, Conda(Mamba), Slack
 > * Other Tools: Karabiner
 > * Documentation & Teamwork Related: Obsidian, Notion, Draw.io
@@ -141,4 +138,4 @@
 
 > **Address:**  92 Yeoksam-ro 12, Gangnam-gu, Seoul, Korea  
 > **Phone:**    +82-10-2668-8138  
-*This CV was written in markdown*
+<center style="font-style:oblique">This CV was written in markdown</center>
