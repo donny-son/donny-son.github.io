@@ -1,9 +1,4 @@
-<style>
-@font-face {
-        font-family: NotoSansKR;
-        src: local(*), url('./about/resume/assets/fonts/NotoSansKR-Bold.otf') format("opentype");
-}
-</style>
+
 <center><span style="font-family:NotoSansKR; font-size:2.5em;">손동욱</span></center>
 <center><span style="font-family:Didot; font-size:2.5em;">Dongook Son</span></center>
 <center><span style="font-family:Didot; font-size:1.5em;">
