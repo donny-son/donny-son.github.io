@@ -127,7 +127,7 @@
 <br />
 - - - -
 
-> * Language Proficiency: Korean(Native), English(Native)
+> * Language Proficiency: Korean(Native), English(Near-Native)
 > * Search Engine: DuckDuckGo, Google
 > * Database Systems: RDB(PostgreSQL, MySQL), GraphDB(Neo4j)
 > * Cloud Frameworks: GCP, AWS, NCP
