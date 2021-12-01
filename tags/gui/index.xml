@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>gui on Don&#39;s Thoughts</title>
+    <link>https://donny-son.github.io/tags/gui/</link>
+    <description>Recent content in gui on Don&#39;s Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 Apr 2021 08:05:55 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/gui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating Gui for Your Python App</title>
+      <link>https://donny-son.github.io/posts/creating-gui-for-your-python-app/</link>
+      <pubDate>Thu, 15 Apr 2021 08:05:55 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/creating-gui-for-your-python-app/</guid>
+      <description>Intro Sometimes it is just nice to make a simple GUI for your python application. There could be a lot of reasons why you want to, or perhaps need to do this.
+  For personal use, you might have several machines that you would like to run the application on. For sharing purposes, there might be fellow colleagues who need to use the python application wihtout wanting to interact with the terminal.</description>
+    </item>
+    
+  </channel>
+</rss>

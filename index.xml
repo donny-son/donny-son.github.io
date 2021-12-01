@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Don&#39;s Thoughts</title>
+    <link>https://donny-son.github.io/</link>
+    <description>Recent content on Don&#39;s Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 28 Aug 2021 06:21:04 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Drawing Gemstones With ggplot</title>
+      <link>https://donny-son.github.io/posts/drawing-gemstones-with-ggplot/</link>
+      <pubDate>Sat, 28 Aug 2021 06:21:04 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/drawing-gemstones-with-ggplot/</guid>
+      <description>Composition of irregular and complex patterns can be simplified with ggplot; graphical package used in R.
+This project aims to recreate various crystallic shapes via random sampling from uniform and standard normal distribution. Additional to the ggplot2 package there are two more dependencies; cowplot and RColorBrewer. cowplot is required for importing the theme_nothing() function(minimal theme without any legends or axis) and the plot_grid() function which enables plotting multiple ggplot objects in a single page.</description>
+    </item>
+    
+    <item>
+      <title>Git Revert and Reset Simplified</title>
+      <link>https://donny-son.github.io/posts/git-revert-and-reset-simplified/</link>
+      <pubDate>Wed, 21 Apr 2021 22:01:23 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/git-revert-and-reset-simplified/</guid>
+      <description>“If you travel back into your own past, that destination becomes your future, and your former present becomes the past, which can&amp;rsquo;t now be changed by your new future.”
+-Hulk from Avengers: Endgame
+ Revert and Reset are git commands that come in handy when you need to organize commits or delete them permanently. I will compare these commands how they differ and when they might become useful for a project.</description>
+    </item>
+    
+    <item>
+      <title>Add Comments and Chatbots to Your Hugo Website</title>
+      <link>https://donny-son.github.io/posts/add-comments-and-chatbots-to-your-hugo-website/</link>
+      <pubDate>Sun, 18 Apr 2021 15:05:46 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/add-comments-and-chatbots-to-your-hugo-website/</guid>
+      <description>INTRO If you’ve started hosting a static site for blog posts or as an portfolio website, you can implement dynamic features such as comment sections and chat services by delegating these functions to service providers such as Disqus or Drift. In this article I’ll walk you through how I’ve implemented these features on my website built with Hugo.
+Disqus and Drift Disqus Disqus offers the comment plugin feature for your website.</description>
+    </item>
+    
+    <item>
+      <title>Cronjob With Conda</title>
+      <link>https://donny-son.github.io/posts/cronjob-with-conda/</link>
+      <pubDate>Sat, 17 Apr 2021 09:47:32 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/cronjob-with-conda/</guid>
+      <description>How to setup a python cronjob with conda UNIX based machine users can easily setup automated tasks using the default cronjob module. However, if your using conda environments, it might not just work auto-magically out of the box. After fiddling around with system path variables this is how I made my automated task work.
+TL;DR: Don&amp;rsquo;t try to use conda activate &amp;lt;env name&amp;gt;. Set PATH to /opt/anaconda3/envs/&amp;lt;env name&amp;gt;/bin in your crontab.</description>
+    </item>
+    
+    <item>
+      <title>R Tips and Tricks</title>
+      <link>https://donny-son.github.io/posts/r-tips-and-tricks/</link>
+      <pubDate>Fri, 16 Apr 2021 07:32:54 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/r-tips-and-tricks/</guid>
+      <description>Intro Over the past few years studying statistics, I&amp;rsquo;ve learned a few tips and tricks with R and RStudio.
+Import multiple libraries at once Since R has some object-oriented goodness, importing multiple libraries all at once is possible in the following way.
+1 2  pkgs &amp;lt;- c(&amp;#34;ggplot2&amp;#34;, &amp;#34;dplyr&amp;#34;, &amp;#34;sp&amp;#34;, &amp;#34;sf&amp;#34;, &amp;#34;reticulate&amp;#34;, ...) lapply(library, pkgs, character.only = TRUE)   Also note that importing tidyverse package can come in handy.</description>
+    </item>
+    
+    <item>
+      <title>Creating Gui for Your Python App</title>
+      <link>https://donny-son.github.io/posts/creating-gui-for-your-python-app/</link>
+      <pubDate>Thu, 15 Apr 2021 08:05:55 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/creating-gui-for-your-python-app/</guid>
+      <description>Intro Sometimes it is just nice to make a simple GUI for your python application. There could be a lot of reasons why you want to, or perhaps need to do this.
+  For personal use, you might have several machines that you would like to run the application on. For sharing purposes, there might be fellow colleagues who need to use the python application wihtout wanting to interact with the terminal.</description>
+    </item>
+    
+    <item>
+      <title>Upload to Pypi</title>
+      <link>https://donny-son.github.io/posts/upload-to-pypi/</link>
+      <pubDate>Thu, 15 Apr 2021 00:01:49 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/upload-to-pypi/</guid>
+      <description>Intro Few days ago, I published my first python package to pypi. Here&amp;rsquo;s what I&amp;rsquo;ve learned.
+  Tools build and twine were the two fundamental packages. The build package literally builds a repository into a distributable compressed file. This simple command python3 -m build will create a dist/ directory which contains the tar.gz and whl files.
+twine can directly upload your repository to pypi and testpypi. testpypi is nothing more than a test version of pypi.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://donny-son.github.io/about/</link>
+      <pubDate>Wed, 14 Apr 2021 15:42:51 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/about/</guid>
+      <description>A little information about myself...</description>
+    </item>
+    
+    
+  </channel>
+</rss>

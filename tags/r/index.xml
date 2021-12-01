@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>R on Don&#39;s Thoughts</title>
+    <link>https://donny-son.github.io/tags/r/</link>
+    <description>Recent content in R on Don&#39;s Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 28 Aug 2021 06:21:04 +0900</lastBuildDate><atom:link href="https://donny-son.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Drawing Gemstones With ggplot</title>
+      <link>https://donny-son.github.io/posts/drawing-gemstones-with-ggplot/</link>
+      <pubDate>Sat, 28 Aug 2021 06:21:04 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/drawing-gemstones-with-ggplot/</guid>
+      <description>Composition of irregular and complex patterns can be simplified with ggplot; graphical package used in R.
+This project aims to recreate various crystallic shapes via random sampling from uniform and standard normal distribution. Additional to the ggplot2 package there are two more dependencies; cowplot and RColorBrewer. cowplot is required for importing the theme_nothing() function(minimal theme without any legends or axis) and the plot_grid() function which enables plotting multiple ggplot objects in a single page.</description>
+    </item>
+    
+    <item>
+      <title>R Tips and Tricks</title>
+      <link>https://donny-son.github.io/posts/r-tips-and-tricks/</link>
+      <pubDate>Fri, 16 Apr 2021 07:32:54 +0900</pubDate>
+      
+      <guid>https://donny-son.github.io/posts/r-tips-and-tricks/</guid>
+      <description>Intro Over the past few years studying statistics, I&amp;rsquo;ve learned a few tips and tricks with R and RStudio.
+Import multiple libraries at once Since R has some object-oriented goodness, importing multiple libraries all at once is possible in the following way.
+1 2  pkgs &amp;lt;- c(&amp;#34;ggplot2&amp;#34;, &amp;#34;dplyr&amp;#34;, &amp;#34;sp&amp;#34;, &amp;#34;sf&amp;#34;, &amp;#34;reticulate&amp;#34;, ...) lapply(library, pkgs, character.only = TRUE)   Also note that importing tidyverse package can come in handy.</description>
+    </item>
+    
+  </channel>
+</rss>
