@@ -13,9 +13,7 @@
 <meta name="google-site-verification" content="XYZabc" />
 <meta name="yandex-verification" content="XYZabc" />
 <meta name="msvalidate.01" content="XYZabc" />
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.d02bf6b2cec3bd9f67202617c5f8c8ea78de6fad35a6c434d49a79cc5ca9b8b1.css" integrity="sha256-0Cv2ss7DvZ9nICYXxfjI6njeb601psQ01Jp5zFypuLE=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://donny-son.github.io/programmer.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://donny-son.github.io/programmer.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://donny-son.github.io/programmer.png">
@@ -24,37 +22,44 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.83.1" />
-<link rel="alternate" type="application/rss&#43;xml" href="https://donny-son.github.io/tags/packaging/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://donny-son.github.io/tags/packaging/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    <script>
-    "use strict";
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    !function() {
-    var t = window.driftt = window.drift = window.driftt || [];
-    if (!t.init) {
-        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-        t.factory = function(e) {
-        return function() {
-            var n = Array.prototype.slice.call(arguments);
-            return n.unshift(e), t.push(n), t;
-        };
-        }, t.methods.forEach(function(e) {
-        t[e] = t.factory(e);
-        }), t.load = function(t) {
-        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-        var i = document.getElementsByTagName("script")[0];
-        i.parentNode.insertBefore(o, i);
-        };
-    }
-    }();
-    drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('5h33nvymhycm');
-    </script>
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-<meta property="og:title" content="packaging" />
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="packaging" />
 <meta property="og:description" content="Donny&#39;s Thoughts" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://donny-son.github.io/tags/packaging/" /><meta property="og:site_name" content="donsThoughts" />
@@ -65,40 +70,64 @@
 
 </head>
 
-<body class="list dark" id="top">
-<noscript>
-    <style type="text/css">
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    </style>
-</noscript>
+</script>
 
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://donny-son.github.io/" accesskey="h" title="  (Alt + H)">
-                <img src="/rocket.gif" alt="logo" aria-label="logo"
-                    height="30"> </a>
+            <a href="https://donny-son.github.io/" accesskey="h" title="Home |  (Alt + H)">Home | </a>
             <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </span>
         </div>
-        <ul id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu">
             <li>
-                <a href="https://donny-son.github.io/posts/" title="posts">
-                    <span>posts</span>
+                <a href="https://donny-son.github.io/resume/" title="CV">
+                    <span>CV</span>
                 </a>
             </li>
             <li>
-                <a href="https://donny-son.github.io/search/" title="search (Alt &#43; /)" accesskey=/>
-                    <span>search</span>
+                <a href="https://donny-son.github.io/posts/" title="POSTS">
+                    <span>POSTS</span>
                 </a>
             </li>
             <li>
-                <a href="https://donny-son.github.io/tags/" title="tags">
-                    <span>tags</span>
+                <a href="https://donny-son.github.io/search/" title="SEARCH (Alt &#43; /)" accesskey=/>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://donny-son.github.io/tags/" title="TAGS">
+                    <span>TAGS</span>
                 </a>
             </li>
         </ul>
@@ -111,41 +140,40 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>Upload to Pypi</h2>
+    <h2>Upload to Pypi
+    </h2>
   </header>
   <section class="entry-content">
     <p>Intro Few days ago, I published my first python package to pypi. Here’s what I’ve learned.
   Tools build and twine were the two fundamental packages. The build package literally builds a repository into a distributable compressed file. This simple command python3 -m build will create a dist/ directory which contains the tar.gz and whl files.
 twine can directly upload your repository to pypi and testpypi. testpypi is nothing more than a test version of pypi....</p>
   </section>
-  <footer class="entry-footer">April 15, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me</footer>
+  <footer class="entry-footer"><span title='2021-04-15 00:01:49 +0900 KST'>April 15, 2021</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me</footer>
   <a class="entry-link" aria-label="post link to Upload to Pypi" href="https://donny-son.github.io/posts/upload-to-pypi/"></a>
 </article>
     </main>
-    <footer class="footer">
+    
+<footer class="footer">
     <span>&copy; 2021 <a href="https://donny-son.github.io/">Don&#39;s Thoughts</a></span>
-    
-    
-    
-    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
-    <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-            <path d="M12 6H0l6-6z" />
-        </svg>
-    </button>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
 </a>
 
 <script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
-    }
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -179,6 +207,18 @@ twine can directly upload your repository to pypi and testpypi. testpypi is noth
             mybutton.style.opacity = "0";
         }
     };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
 </script>
 </body>
